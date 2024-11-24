@@ -1,0 +1,21 @@
+@use 'mixins';
+@import 'variables';
+
+html {
+    box-sizing: border-box;
+}
+
+* {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: $primary-family;
+    font-size: 0.875rem;
+    background-color: $stone-light;
+    color: $stone-dark;
+    min-height: 100vh;
+    line-height: 1.4;
+}

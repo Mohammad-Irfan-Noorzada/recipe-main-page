@@ -1,0 +1,136 @@
+.main {
+    background-color: $white;
+    
+    @include breakpoint('medium') {
+        max-width: 46rem;
+        margin: 7.625rem auto;
+        border-radius: 1rem;
+    }
+
+    & img {
+        display: block;
+        max-width: 100%;
+
+       @include breakpoint('medium') {
+        padding: 2.5rem;
+        border-radius: 3rem;
+        }
+    }
+
+    &__page {
+        padding: 2rem;
+        padding-bottom: 1rem;
+
+        @include breakpoint('medium') {
+            padding: 0 2.5rem 1rem;
+        }
+    }
+}
+
+.preparation {
+    background-color: $rose-light;      
+    padding: 1.5625rem 1.75rem 0.9375rem;
+    border-radius: .8rem;
+
+    & h3 {
+        color: $rose-dark;
+    }
+
+    & ul {
+        list-style: none;
+        margin: 0.625rem 0 0.3125rem;
+    }
+
+    & li {
+        position: relative;
+        padding-left: 2.375rem;
+        padding-top: 0.3125rem;
+        padding-right: 0;
+        padding-bottom: 0.3125rem;
+    }
+
+    & li::before {
+        content: "•";
+        position: absolute;
+        left: 2%;
+        top: 8%;
+        font-size: 1.275rem;
+        color: $rose-dark;
+    }
+}
+
+.ingredients {
+    & ul {
+        list-style: none;
+    }
+
+    & li {
+        position: relative;
+        padding-left: 2.375rem;
+        padding-top: 0.3125rem;
+        padding-right: 0;
+        padding-bottom: 0.3125rem;
+    }
+
+    & li::before {
+        content: "•";
+        position: absolute;
+        left: 1%;
+        top: 6%;
+        font-size: 1.275rem;
+        color: $rose-dark;
+    }
+}
+
+.instructions {
+    & ol {
+        list-style-type: none;
+    }
+
+    & li {
+        counter-increment: item;
+        position: relative;
+        padding-left: 2rem;
+        padding-top: 0.3125rem;
+        padding-right: 0;
+        padding-bottom: 0.3125rem;
+
+        @include breakpoint('medium') {
+            font-size: 0.940rem;
+        }
+    }
+
+    & li::before {
+        content: counter(item) ". ";
+        position: absolute;
+        left: 1%;
+        color: $rose-dark;
+        font-weight: bold;
+    }
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    & table {
+        border-collapse: collapse;
+    }
+
+    & td {
+        padding: 1rem 1.5rem;
+    }
+
+    & td:nth-child(2) {
+        color: $brown-dark;
+        font-weight: bold;
+    }
+    
+    & tr {
+        border-bottom: 1px solid #ccc;
+    }
+
+    & tr:last-child{
+        border-bottom: none;
+    }
+}

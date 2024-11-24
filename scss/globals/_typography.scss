@@ -1,0 +1,36 @@
+h1 {
+    font-size: 1.75rem;
+    font-family: $secondary-family;
+    color: $stone-darker;
+    margin-bottom: 1.2rem;
+    margin-top: -0.5rem;
+    font-weight: 400;
+
+    @include breakpoint('medium') {
+        font-size: 40px;
+    }
+}
+
+h2 {
+    font-size: 1.475rem;
+    font-weight: 400;
+    font-family: $secondary-family;
+    color: $brown-dark;
+    margin-top: 25px;
+    margin-bottom: 16px;
+}
+
+p {
+    margin-bottom: 2rem;
+
+    @include breakpoint('medium') {
+        font-size: 1rem;
+    }
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: #d8d8d8;
+    margin: 1.5rem 0;
+}
